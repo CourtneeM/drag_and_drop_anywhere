@@ -1,0 +1,35 @@
+.ball-container {
+  width: 60px;
+  height: 60px;
+  margin: 30px 10px 0;
+  border-radius: 50%;
+}
+.ball-container:hover {
+  cursor: pointer;
+}
+
+#red-ball {
+  background: red;
+}
+
+#green-ball {
+  background: lime;
+}
+
+#blue-ball {
+  background: turquoise;
+}
+
+#purple-ball {
+  background: rebeccapurple;
+}
+
+#pink-ball {
+  background: hotpink;
+}
+
+.invicible {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

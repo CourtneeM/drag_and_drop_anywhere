@@ -1,0 +1,1 @@
+(()=>{function e(){setTimeout((()=>this.classList.add("invicible","dragging")),0)}function i(){console.log(this),this.classList.remove("invicible")}[...document.querySelectorAll(".ball-container")].forEach((t=>{t.addEventListener("dragstart",e),t.addEventListener("dragend",i)}))})();
