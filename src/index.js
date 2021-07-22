@@ -4,9 +4,11 @@ function onDragStart() {
   setTimeout(() => (this.classList.add('invicible', 'dragging')), 0)
 }
 
-function onDragEnd() {
-  console.log(this);
-  this.classList.remove('invicible');
+function onDragEnd(e) {
+  this.classList.remove('invicible', 'dragging');
+  this.style.position = 'absolute';
+  this.style.top = `${e.clientY - 82}px`;
+  this.style.left = `${e.clientX - 35}px`;
 }
 
 balls.forEach(ball => {
@@ -14,7 +16,8 @@ balls.forEach(ball => {
   ball.addEventListener('dragend', onDragEnd);
 });
 
-// enter
-// leave
-// over
-// drop
+function onDragOver(e) {
+  e.preventDefault();
+}
+
+document.querySelector('body').addEventListener('dragover', onDragOver);
